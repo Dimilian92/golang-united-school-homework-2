@@ -12,13 +12,14 @@ import "math"
 
 type amountOfSides int
 
+const SidesTriangle amountOfSides = 3
+const SidesSquare amountOfSides = 4
+const SidesCircle amountOfSides = 0
+
 func CalcSquare(sideLen float64, sidesNum amountOfSides) float64 {
-	const SidesTriangle amountOfSides = 3
-	const SidesSquare amountOfSides = 4
-	const SidesCircle amountOfSides = 0
 
 	if sidesNum == SidesTriangle {
-		return (math.Pow(sideLen, 2) * math.Sqrt(3.0)) / 4.0
+		return (math.Pow(sideLen, 2.0) * math.Sqrt(3.0)) / 4
 	} else if sidesNum == SidesSquare {
 		return math.Pow(sideLen, 2.0)
 	} else if sidesNum == SidesCircle {
